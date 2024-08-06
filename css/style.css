@@ -1,0 +1,119 @@
+/* Import external CSS file for star background effect */
+@import url("stars_bg.css");
+
+/* General body styling */
+body {
+    font-family: "lato", sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+/* Styling for the header section */
+header {
+    background-color: rgba(100, 100, 255, 0.08);
+    color: white;
+    padding-bottom: 10px;
+    padding-top: 0px; 
+}
+
+/* Styling for main heading */
+h1 {
+    color: #FFF; 
+    font-weight: 320; 
+    font-size: clamp(2.6rem, -1.5rem + 9vw, 4rem); /* Responsive font size */
+    letter-spacing: 10px; 
+    text-align: center; 
+    background: -webkit-linear-gradient(white, #38495a);
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+}
+
+/* Styling for navigation menu */
+nav ul {
+    list-style: none; /* Remove bullet points */
+    margin: 0; 
+    padding: 0; 
+    display: flex;
+    justify-content: center; 
+}
+
+/* Styling for navigation list items */
+nav li {
+    margin: 0 13px; /* Horizontal spacing between items */
+}
+
+/* Styling for navigation links */
+nav a {
+    color: white;
+    text-decoration: none; 
+    text-transform: uppercase; 
+    font-size: clamp(0.9rem, -.6rem + 4vw, 1.2rem); 
+    font-weight: 420; 
+    padding-top: 3px; 
+    background: -webkit-linear-gradient(white, #38495a); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+
+/* Hover effect for navigation links */
+nav a:hover {
+    text-decoration: none; 
+    -webkit-text-fill-color: #6FB4FA; /* Change text color on hover */
+}
+
+/* Styling for the main content area */
+main {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    padding: 2rem; 
+}
+
+/* Styling for content section */
+#content {
+    color: rgba(255, 255, 255, 0.8); 
+    width: 90%; 
+    max-width: 500px;
+    margin: 5rem;
+    padding: 1.1rem; 
+    padding-left: 2rem; 
+    background-color: rgba(100, 100, 255, 0.08);
+    border-radius: 12px; 
+    box-shadow: rgba(72, 135, 202, 0.6) 0 0 60px 19px;
+}
+
+/* Styling for navigation buttons container */
+#navigation {
+    display: flex; 
+    justify-content: space-between; /* Space items evenly with space between */
+    width: 90%; 
+    max-width: 500px; 
+}
+
+/* Styling for navigation buttons */
+#navigation button {
+    padding: 0.5rem 1rem;
+    border: none; 
+    border-radius: 4px; /* Rounded corners */
+    background-color: rgba(100, 100, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Disabled state for navigation buttons */
+#navigation button:disabled {
+    background-color: rgba(100, 100, 255, 0.1); 
+    cursor: not-allowed;
+}
+
+/* Styling for footer */
+footer {
+    background-color: rgba(100, 100, 255, 0.08); 
+    color: rgba(255, 255, 255, 0.7); 
+    text-align: center; 
+    padding: 1rem 0; 
+    position: fixed; 
+    bottom: 0;
+    width: 100%; 
+}
