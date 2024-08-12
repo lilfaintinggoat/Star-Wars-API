@@ -1,0 +1,176 @@
+/* Import external CSS for the starry background */
+@import url("stars_bg.css");
+@import url("style-media.css");
+
+/* Global styles */
+body {
+
+    overflow: auto;
+    /* or overflow: scroll; */
+    font-family: "Lato", sans-serif;
+    font-size: clamp(0.875rem, 0.5909rem + 0.9091vw, 1.5rem);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+header {
+    background-color: rgba(100, 100, 255, 0.08);
+    color: white;
+    max-height: 200px;
+    padding: 10px 0;
+}
+
+/* Title styling */
+h1 {
+    color: #FFF;
+    margin: 0;
+    text-align: center;
+    font-weight: 360;
+    font-size: clamp(1.5rem, 0.6477rem + 2.7273vw, 3.375rem);
+    letter-spacing: 7px;
+    background: -webkit-linear-gradient(white, #38495a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Navigation menu styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: clamp(0.9rem, 0.8208rem + 0.2535vw, 1.125rem);
+    font-weight: 410;
+    background: -webkit-linear-gradient(white, #38495a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav a:hover {
+    -webkit-text-fill-color: #6FB4FA;
+}
+
+/* Hamburger menu styles for mobile view */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 8px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+/* Main content styling */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Content box styling */
+#content {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: clamp(0.9rem, 0.8208rem + 0.2535vw, 1.125rem);
+    width: 600px;
+    max-width: 80%;
+    margin: 1rem;
+    flex-direction: column;
+    padding-left: 1.7rem;
+    background-color: rgba(100, 100, 255, 0.08);
+    border-radius: 12px;
+    box-shadow: rgba(72, 135, 202, 0.6) 0 0 60px 19px;
+}
+
+/* Navigation button styling */
+#navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 500px;
+}
+
+#navigation button {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(100, 100, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+#navigation button:disabled {
+    background-color: rgba(100, 100, 255, 0.1);
+    cursor: not-allowed;
+}
+
+/* Footer styling */
+footer {
+    background-color: rgba(100, 100, 255, 0.08);
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    font-size: clamp(0.625rem, 0.3977rem + 0.7273vw, 1.125rem);
+    padding: 1rem 0;
+    position: relative;
+    /* margin-top: auto; */
+    width: 100%;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 650px) {
+    nav ul {
+        flex-direction: column;
+        line-height: 1.3;
+        display: none;
+        position: absolute;
+        top: 48px;
+        right: 10px;
+        text-align: right;
+
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav a {
+        -webkit-text-fill-color: white;
+        font-size: clamp(0.75rem, 0.5739rem + 0.5634vw, 1.25rem);
+    }
+
+    h1 {
+        font-weight: 480;
+    }
+
+    #content {
+        margin-top: 7rem;
+    }
+}
